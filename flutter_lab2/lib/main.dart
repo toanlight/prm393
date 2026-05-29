@@ -1,14 +1,12 @@
 import 'dart:async';
 
-// --- Exercise 4: Intro to OOP ---
+// --- Exercise 4 ---
 class Car {
   String brand;
   int speed;
 
-  // Constructor
   Car(this.brand, this.speed);
 
-  // Named Constructor
   Car.electric(this.brand, this.speed) {
     print("--- Initializing an electric car: $brand ---");
   }
@@ -31,19 +29,16 @@ class ElectricCar extends Car {
 }
 
 // --- Exercise 3: Functions ---
-// Hàm thường
 int calculateRepairCost(int hours, int rate) {
   return hours * rate;
 }
 
-// Arrow function
 double calculateVAT(double amount) => amount * 0.1;
 
 // --- Exercise 5: Async & Streams ---
-// Async/Await
 Future<String> repairCar() async {
   print("Repairing car in progress...");
-  await Future.delayed(const Duration(seconds: 3)); // Mô phỏng sửa xe mất 3 giây
+  await Future.delayed(const Duration(seconds: 3));
   return "Status: Car repair completed!";
 }
 
